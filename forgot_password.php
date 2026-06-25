@@ -15,6 +15,8 @@ if (isset($_SESSION['user_id'])) {
     <title>Mzansi Munch | Forgot Password</title>
     <?php include 'includes/head.php'; ?>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+
 </head>
 <body>
 

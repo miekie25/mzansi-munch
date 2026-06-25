@@ -4,11 +4,19 @@ include 'includes/db_config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $email = trim($_POST['email'] ?? '');
 
-    // Find user
-    $sql = "SELECT id FROM users WHERE email = '$email'";
-    $result = $conn->query($sql);
+    if (empty($email)) {
+        $_SESSION['message'] = "Please enter an email address.";
+        header("Location: forgot_password.php");
+        exit();
+    }
+
+    // Find user with prepared statement (secure)
+    $stmt = $conn->prepare("SELECT id FROM users WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
 
@@ -17,20 +25,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $token = bin2hex(random_bytes(32));
 
-        // Delete any previous reset requests for this user
-        $conn->query("DELETE FROM password_resets WHERE user_id = '$user_id'");
+        // Delete previous reset requests (secure)
+        $del_stmt = $conn->prepare("DELETE FROM password_resets WHERE user_id = ?");
+        $del_stmt->bind_param("i", $user_id);
+        $del_stmt->execute();
+        $del_stmt->close();
 
-        // Create new reset request
-        $sql = "INSERT INTO password_resets (user_id, token, created_at)
-                VALUES ('$user_id', '$token', NOW())";
+        // Create new reset request (secure)
+        $insert_stmt = $conn->prepare("INSERT INTO password_resets (user_id, token, created_at) VALUES (?, ?, NOW())");
+        $insert_stmt->bind_param("is", $user_id, $token);
+        $insert_stmt->execute();
+        $insert_stmt->close();
 
-        $conn->query($sql);
-
-        // Store reset link for demonstration purposes
+        // Store reset link for demonstration
         $_SESSION['reset_link'] = "reset_password.php?token=" . $token;
+        $_SESSION['message'] = "Password reset link generated. Check your email (demo: link shown below).";
+        $_SESSION['message_type'] = "success";
+
+    } else {
+        // Email not found — block them
+        $_SESSION['message'] = "No account found with that email address.";
+        $_SESSION['message_type'] = "error";
     }
 
-    $_SESSION['message'] = "If that email exists, a password reset link has been generated.";
+    $stmt->close();
 
     header("Location: reset_confirmation.php");
     exit();

@@ -4,18 +4,26 @@ include 'includes/db_config.php';
 
 $token = $_GET['token'] ?? '';
 $valid = false;
+$user_id = null;
 
-$sql = "
-    SELECT *
-    FROM password_resets
-    WHERE token = '$token'
-    AND created_at >= DATE_SUB(NOW(), INTERVAL 1 HOUR)
-";
+if (!empty($token)) {
+    // Secure: use prepared statement
+    $stmt = $conn->prepare("
+        SELECT user_id 
+        FROM password_resets 
+        WHERE token = ? 
+        AND created_at >= DATE_SUB(NOW(), INTERVAL 1 HOUR)
+    ");
+    $stmt->bind_param("s", $token);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-$result = $conn->query($sql);
-
-if ($result && $result->num_rows > 0) {
-    $valid = true;
+    if ($result && $result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $user_id = $row['user_id'];
+        $valid = true;
+    }
+    $stmt->close();
 }
 ?>
 <!DOCTYPE HTML>
@@ -23,6 +31,7 @@ if ($result && $result->num_rows > 0) {
 <head>
     <title>Mzansi Munch | New Password</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
 </head>
 <body>
     <main>
@@ -32,14 +41,14 @@ if ($result && $result->num_rows > 0) {
                 <form action="reset_process.php" method="POST">
                     <input type="hidden" name="token" value="<?php echo htmlspecialchars($token); ?>">
                     <label>New Password</label>
-<input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="password" required>
 
-<ul id="passwordRequirements" style="list-style: none; font-size: 0.8rem; padding: 0;">
-    <li id="len">At least 6 characters</li>
-    <li id="cap">At least one uppercase letter</li>
-    <li id="low">At least one lowercase letter</li>
-    <li id="spec">Special character (_ * @)</li>
-</ul>
+                    <ul id="passwordRequirements" style="list-style: none; font-size: 0.8rem; padding: 0;">
+                        <li id="len">At least 6 characters</li>
+                        <li id="cap">At least one uppercase letter</li>
+                        <li id="low">At least one lowercase letter</li>
+                        <li id="spec">Special character (_ * @)</li>
+                    </ul>
                     <button type="submit" class="btn-primary">Update Password</button>
                 </form>
             <?php else: ?>
@@ -66,5 +75,4 @@ password.addEventListener('input', function () {
     specReq.style.color = /[_*@]/.test(val) ? 'green' : 'gray';
 });
 </script>
-
 </html>
