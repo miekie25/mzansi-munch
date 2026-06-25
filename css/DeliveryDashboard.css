@@ -1,0 +1,321 @@
+﻿/* ── Stats Grid ── */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+    .stat-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .stat-card .stat-label {
+        font-size: 0.8rem;
+        color: #6b7280;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-card .stat-value {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #111827;
+    }
+
+        .stat-card .stat-value.warning {
+            color: #f97316;
+        }
+
+        .stat-card .stat-value.danger {
+            color: #dc2626;
+        }
+
+        .stat-card .stat-value.success {
+            color: #22c55e;
+        }
+
+/* ── Dashboard Sections ── */
+.dash-sections {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+    .dash-sections {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+    .section-card h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+        .section-card h3 i {
+            color: #f97316;
+        }
+
+/* ── Orders Table ── */
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .orders-table th {
+        text-align: left;
+        padding: 0.75rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #6b7280;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .orders-table td {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+        color: #374151;
+        border-bottom: 1px solid #f3f4f6;
+    }
+
+    .orders-table tr:last-child td {
+        border-bottom: none;
+    }
+
+/* ── Status Badges ── */
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-pending { background: #fef3c7; color: #92400e; }
+.status-prepared { background: #dbeafe; color: #1e40af; }
+.status-ready { background: #d1fae5; color: #065f46; }
+.status-accepted { background: #e0e7ff; color: #3730a3; }
+.status-out { background: #c7d2fe; color: #312e81; }
+.status-delivered { background: #dcfce7; color: #15803d; }
+
+/* ── Low Stock List ── */
+.low-stock-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .low-stock-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem;
+        border-bottom: 1px solid #f3f4f6;
+    }
+
+        .low-stock-list li:last-child {
+            border-bottom: none;
+        }
+
+    .low-stock-list .item-name {
+        font-weight: 500;
+        color: #374151;
+    }
+
+    .low-stock-list .stock-count {
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 0.25rem 0.5rem;
+        border-radius: 6px;
+    }
+
+.stock-low { background: #fee2e2; color: #dc2626; }
+.stock-critical { background: #fecaca; color: #991b1b; }
+
+/* ── View All Link ── */
+.view-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 1rem;
+    color: #f97316;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+    .view-all-link:hover {
+        text-decoration: underline;
+    }
+
+/* ── Empty State ── */
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: #9ca3af;
+}
+
+    .empty-state i {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+/* ── Earnings Card ── */
+.earnings-card {
+    background: linear-gradient(135deg, #f97316 0%, #ea6c0a 100%);
+    color: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+    .earnings-card h3 {
+        font-size: 0.85rem;
+        font-weight: 500;
+        opacity: 0.9;
+        margin-bottom: 0.5rem;
+    }
+
+    .earnings-card .amount {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .earnings-card .sub {
+        font-size: 0.8rem;
+        opacity: 0.8;
+        margin-top: 0.25rem;
+    }
+
+/* ── Quick Links ── */
+.quick-links-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 2rem 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+    .quick-links-heading i {
+        color: #f97316;
+    }
+
+/* ── Dash Actions / Cards ── */
+.dash-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.dash-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #374151;
+    transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+    min-width: 160px;
+    flex: 0 0 auto;
+    position: relative;
+}
+
+    .dash-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        border-color: #f97316;
+    }
+
+    .dash-card i {
+        font-size: 1.75rem;
+        color: #f97316;
+    }
+
+    .dash-card span {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+/* ── Notification Badge ── */
+.notif-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    min-width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    box-shadow: 0 2px 6px rgba(220, 38, 38, 0.4);
+    animation: pulse-badge 2s infinite;
+}
+
+@keyframes pulse-badge {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* ── Sidebar Notification Badge ── */
+.sidebar-nav .nav-item {
+    position: relative;
+}
+
+.sidebar-nav .notif-badge {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    min-width: 20px;
+    height: 20px;
+    animation: none;
+}
+
+.sidebar-nav .nav-item .notif-badge {
+    animation: pulse-badge 2s infinite;
+}

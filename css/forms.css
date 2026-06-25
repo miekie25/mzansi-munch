@@ -1,0 +1,302 @@
+/* ============================================================
+   FORMS (Login & Register Sections)
+   ============================================================ */
+.form-container {
+    background-color: lightgreen;
+    padding: 60px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+fieldset {
+    border: 2px solid darkgreen;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+legend {
+    font-weight: bold;
+    color: darkgreen;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif !important;
+    font-size: 16px !important;
+    color: #333333;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border: 2px solid darkgreen;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+    .password-wrapper i {
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: darkgreen;
+        font-size: 18px;
+        z-index: 10;
+    }
+
+/* ============================================================
+   LOGIN PAGE SPECIFIC STYLES
+   ============================================================ */
+.login-section {
+    background-color: lightgreen;
+    padding: 60px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+    .login-section h2 {
+        color: darkgreen;
+        margin-bottom: 30px;
+    }
+
+    .login-section p {
+        margin-top: 15px;
+    }
+
+    .login-section a {
+        color: darkgreen;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+        .login-section a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+/* ============================================================
+   REGISTER PAGE SPECIFIC STYLES
+   ============================================================ */
+.register-section {
+    background-color: lightgreen;
+    padding: 40px 60px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+    .register-section h2 {
+        color: darkgreen;
+        margin-bottom: 25px;
+    }
+
+    .register-section fieldset {
+        border: 2px solid darkgreen;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .register-section legend {
+        font-weight: bold;
+        color: darkgreen;
+        padding: 0 10px;
+    }
+
+    .register-section label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .register-section p {
+        margin-top: 20px;
+    }
+
+    .register-section a {
+        color: darkgreen;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+        .register-section a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+.back-link {
+    position: relative !important;
+    display: block;
+    margin: 10px 0 20px 15px;
+    top: auto !important;
+    left: auto !important;
+}
+
+    .back-link:hover {
+        text-decoration: underline;
+        color: darkgreen;
+    }
+
+/* ============================================================
+   ADDITIONAL INFO / BUSINESS SETUP STYLES
+   ============================================================ */
+.info-box {
+    background-color: lightgreen;
+    padding: 60px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+    .info-box h2 {
+        color: darkgreen;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+    .checkbox-item input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+        margin-right: 12px;
+        cursor: pointer;
+        accent-color: darkgreen;
+    }
+
+.address-group input {
+    margin-bottom: 8px;
+}
+
+/* ============================================================
+   SELLER SETUP SPECIFIC STYLES
+   ============================================================ */
+.info-box h2:first-of-type {
+    font-size: 1.2rem;
+    color: #444;
+}
+
+input[name="biz_name"] {
+    border: 2px solid #ccc;
+    background-color: #f0fff0;
+}
+
+/* Delivery Registration Styling Rules */
+.delivery-options {
+    display: flex;
+    gap: 24px;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.delivery-item {
+    display: flex;
+    align-items: center;
+    background: #e2fcd5;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    min-width: 140px;
+}
+
+    .delivery-item:hover {
+        transform: translateY(-2px);
+    }
+
+    .delivery-item input[type="radio"] {
+        margin-right: 12px;
+        cursor: pointer;
+        accent-color: darkgreen;
+        width: 18px;
+        height: 18px;
+    }
+
+    .delivery-item label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #1b4d0e;
+        cursor: pointer;
+        margin: 0;
+        display: inline-block;
+    }
+
+/* ============================================================
+   FORM BUTTONS
+   ============================================================ */
+
+.register-section button[type="submit"],
+.form-container button[type="submit"],
+.info-box button[type="submit"] {
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+    margin: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+    .register-section button[type="submit"]:hover,
+    .form-container button[type="submit"]:hover,
+    .info-box button[type="submit"]:hover {
+        background-color: lightblue;
+        color: black;
+        transform: scale(1.05);
+        border: 2px solid darkgreen;
+    }

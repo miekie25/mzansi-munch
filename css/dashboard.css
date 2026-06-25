@@ -1,0 +1,393 @@
+/* ============================================================
+   DASHBOARD SPECIFIC STYLES
+   ============================================================ */
+
+/* The dashboard page needs its own body background and layout */
+.dashboard-body {
+    background: #f0f0f0;
+}
+
+/* Wrapper that sits below the fixed header and above the footer */
+.dashboard-layout {
+    display: flex;
+    margin-top: 70px;
+    min-height: calc(100vh - 70px - 75px);
+}
+
+/* --- Sidebar --- */
+.sidebar {
+    width: 220px;
+    min-width: 220px;
+    background: darkgreen;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+}
+
+.sidebar-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1.25rem;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.pfp-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: lightgreen;
+    color: darkgreen;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.profile-name {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-handle {
+    display: block;
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: 0.75rem 0;
+}
+
+.nav-label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    padding: 0.5rem 1.25rem 0.25rem;
+    font-weight: normal;
+}
+
+.sidebar .nav-item,
+.sidebar .nav-item:visited {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.6rem 1.25rem;
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-weight: normal;
+    border-left: 3px solid transparent;
+    transition: all 0.15s;
+}
+
+    .sidebar .nav-item:hover {
+        color: white;
+        background: rgba(255,255,255,0.1);
+        text-decoration: none;
+    }
+
+    .sidebar .nav-item.active {
+        color: white;
+        border-left-color: lightgreen;
+        background: rgba(255,255,255,0.12);
+        font-weight: 600;
+    }
+
+    .sidebar .nav-item i {
+        font-size: 16px;
+        opacity: 0.85;
+    }
+
+    .sidebar .nav-item.active i {
+        opacity: 1;
+    }
+
+.sidebar-footer {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.logout-link,
+.logout-link:visited {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+    .logout-link:hover {
+        color: #ffcccc;
+        text-decoration: none;
+    }
+
+/* --- Main content area --- */
+.dashboard-main {
+    flex: 1;
+    padding: 2rem;
+    display: block;
+    align-items: unset;
+    justify-content: unset;
+    margin-top: 0;
+}
+
+.greeting {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: darkgreen;
+}
+
+.greeting-sub {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 2rem;
+    font-weight: normal;
+}
+
+/* 2x2 fixed grid for the action cards */
+.dash-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 540px;
+}
+
+.dash-card {
+    background: #fff;
+    border: 1px solid #d4d0c8;
+    border-radius: 12px;
+    padding: 1.5rem 1.25rem;
+    text-decoration: none;
+    color: darkgreen;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: none;
+    letter-spacing: normal;
+    transition: border-color 0.15s, background 0.15s, transform 0.15s;
+    flex: unset;
+    min-width: unset;
+    max-width: unset;
+}
+
+    .dash-card:hover {
+        background: #f0fff0;
+        border-color: darkgreen;
+        color: darkgreen;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 100, 0, 0.1);
+        text-decoration: none;
+    }
+
+    .dash-card i {
+        font-size: 24px;
+        color: darkgreen;
+        opacity: 0.85;
+    }
+
+/* --- Earnings card on seller dashboard --- */
+.earnings-card {
+    background: #fff;
+    border: 1px solid #d4d0c8;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    min-width: 220px;
+}
+
+    .earnings-card h3 {
+        margin: 0;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: #888;
+        font-weight: 600;
+    }
+
+    .earnings-card p {
+        margin: 6px 0 0;
+        font-size: 1.6em;
+        font-weight: 700;
+        color: darkgreen;
+    }
+
+/* --- Data Table Styles --- */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+    .data-table thead tr {
+        background-color: darkgreen;
+        color: white;
+    }
+
+    .data-table thead th {
+        padding: 14px 16px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .data-table tbody tr {
+        border-bottom: 1px solid #eef0eb;
+        transition: background 0.15s;
+    }
+
+        .data-table tbody tr:hover {
+            background-color: #f4faf4;
+        }
+
+        .data-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+    .data-table tbody td {
+        padding: 14px 16px;
+        color: #333;
+        vertical-align: middle;
+    }
+
+    .data-table button,
+    .data-table .btn-primary {
+        padding: 7px 16px;
+        font-size: 13px;
+        margin: 0;
+        border-radius: 8px;
+    }
+
+/* --- Status Badges --- */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+    .status-badge.status-accepted {
+        background-color: #fff8e1;
+        color: #f57f17;
+    }
+
+    .status-badge.status-out-for-delivery {
+        background-color: #e8eaf6;
+        color: #3949ab;
+    }
+
+    .status-badge.status-delivered {
+        background-color: #e0f2f1;
+        color: #00695c;
+    }
+
+    .status-badge.status-pending {
+        background-color: #fff3e0;
+        color: #e65100;
+    }
+
+    .status-badge.status-preparing {
+        background-color: #e3f2fd;
+        color: #1565c0;
+    }
+
+    .status-badge.status-ready-for-pickup {
+        background-color: #fce4ec;
+        color: #ad1457;
+    }
+
+/* --- Sidebar mobile collapse --- */
+@media screen and (max-width: 768px) {
+    .dashboard-layout {
+        flex-direction: column;
+        margin-top: 80px;
+        min-height: unset;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: unset;
+        height: auto;
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0.5rem;
+        overflow: visible;
+    }
+
+    .sidebar-profile {
+        display: none;
+    }
+
+    .sidebar-nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0;
+        gap: 2px;
+    }
+
+    .nav-label {
+        display: none;
+    }
+
+    .sidebar .nav-item {
+        padding: 0.5rem 0.875rem;
+        font-size: 12px;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        border-radius: 6px;
+    }
+
+        .sidebar .nav-item.active {
+            border-left: none;
+            border-bottom-color: lightgreen;
+        }
+
+    .sidebar-footer {
+        border-top: none;
+        padding: 0.5rem 0.875rem;
+    }
+
+    .dashboard-main {
+        padding: 1.25rem;
+    }
+
+    .dash-actions {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 100%;
+    }
+}
