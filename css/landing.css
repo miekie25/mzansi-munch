@@ -1,0 +1,228 @@
+/* ============================================================
+   LANDING PAGE STYLING
+   ============================================================ */
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 80vh;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 0;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+    .hero-btns button {
+        width: auto;
+    }
+
+/* --- RECENTLY ADDED MEALS --- */
+.secondary-content {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+    .secondary-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: darkgreen;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+.meal-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 280px);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center; /* CHANGED from 'start' to 'center' */
+}
+
+.meal {
+    background-color: lightgreen;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+    width: 280px;
+}
+
+    .meal:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        border: 2px solid darkgreen;
+    }
+
+    .meal img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .meal p {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: black;
+        margin-bottom: 15px;
+    }
+
+.no-meals-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #fff;
+    border: 2px dashed #e5e7eb;
+    border-radius: 16px;
+    margin: 1rem auto;
+    max-width: 500px;
+}
+
+    .no-meals-message i {
+        font-size: 3rem;
+        color: #f97316;
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    .no-meals-message p {
+        font-size: 1.1rem;
+        color: #6b7280;
+        margin-bottom: 1rem;
+        font-weight: 500;
+    }
+
+    .no-meals-message .browse-link {
+        display: inline-block;
+        color: #f97316;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 0.5rem 1.5rem;
+        border: 2px solid #f97316;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+    }
+
+        .no-meals-message .browse-link:hover {
+            background: #f97316;
+            color: #fff;
+        }
+
+/* --- KEY FEATURES --- */
+.key-features {
+    background-color: lightgreen;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+    .key-features h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: darkgreen;
+    }
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .feature-card img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .feature-card p {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.5;
+    }
+
+/* --- CALL TO ACTION --- */
+.final-cta {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+    .final-cta h2 {
+        font-size: 45px;
+        color: darkgreen;
+        margin-bottom: 40px;
+    }
+
+.cta-options {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.cta-box {
+    max-width: 400px;
+    padding: 20px;
+}
+
+    .cta-box h3 {
+        font-size: 30px;
+        margin-bottom: 15px;
+        color: #333;
+    }

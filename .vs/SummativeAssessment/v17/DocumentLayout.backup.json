@@ -1,0 +1,73 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\xampp\\htdocs\\projects\\SummativeAssessment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\projects\\SummativeAssessment\\Login.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Login.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\projects\\SummativeAssessment\\admin\\auth.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:admin\\auth.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\projects\\SummativeAssessment\\AddMeal.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AddMeal.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.php",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\projects\\SummativeAssessment\\Login.php",
+              "RelativeDocumentMoniker": "Login.php",
+              "ToolTip": "C:\\xampp\\htdocs\\projects\\SummativeAssessment\\Login.php",
+              "RelativeToolTip": "Login.php",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAEAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-25T09:54:18.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "auth.php",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\projects\\SummativeAssessment\\admin\\auth.php",
+              "RelativeDocumentMoniker": "admin\\auth.php",
+              "ToolTip": "C:\\xampp\\htdocs\\projects\\SummativeAssessment\\admin\\auth.php",
+              "RelativeToolTip": "admin\\auth.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-24T15:07:59.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddMeal.php",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\projects\\SummativeAssessment\\AddMeal.php",
+              "RelativeDocumentMoniker": "AddMeal.php",
+              "ToolTip": "C:\\xampp\\htdocs\\projects\\SummativeAssessment\\AddMeal.php",
+              "RelativeToolTip": "AddMeal.php",
+              "ViewState": "AgIAADkAAAAAAAAAAAAswIAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-24T14:12:50.073Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

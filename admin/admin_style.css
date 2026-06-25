@@ -1,0 +1,90 @@
+/* ==========================================================================
+   MZANSI MUNCH CUSTOM BRAND STYLING
+   ========================================================================== */
+
+/* ==========================================================================
+   WELCOME GREETING TEXT CUSTOMIZATION
+   ========================================================================== */
+
+/* Target the dashboard greeting text specifically to make it pop */
+.welcome-text {
+    color: #000000 !important; /* Pure black greeting text */
+    font-weight: 800 !important; /* Ultra bold impact to match the menu */
+}
+
+/* If there is a subtext paragraph underneath it, let's keep it clean but readable */
+.welcome-sub-text {
+    color: #444444 !important; /* Subtle dark grey for the descriptive subtext */
+    font-weight: 500 !important; /* Medium weight */
+}
+
+/* Left Sidebar active tab pill background */
+.sidebar .nav .nav-item.active > .nav-link {
+    background: darkgreen !important; /* Deep dark brand green */
+}
+
+/* Primary buttons, badge backgrounds, and template background utilities */
+.btn-primary,
+.bg-primary,
+.badge-primary {
+    background-color: #004d20 !important;
+    border-color: #004d20 !important;
+}
+
+    /* Hover, active, and focus states for primary buttons */
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active {
+        background-color: #003314 !important; /* Rich darker green toggle shift */
+        border-color: #003314 !important;
+    }
+
+/* Welcome dashboard text username highlight accent */
+.welcome-text span {
+    color: #004d20 !important;
+}
+
+/* Dropdown menu active list item highlights */
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #004d20 !important;
+}
+
+
+/* ==========================================================================
+   MENU BAR - ULTRA BOLD BLACK TYPOGRAPHY & STATES
+   ========================================================================== */
+
+/* 1. Base State: Make all regular menu link titles and icons pure black, larger, and ultra bold */
+#sidebar .nav .nav-item .nav-link,
+#sidebar .nav .nav-item .nav-link .menu-title,
+#sidebar .nav .nav-item .nav-link i.menu-icon {
+    color: #000000 !important; /* True bold black */
+    font-weight: 800 !important; /* Maximum typography weight */
+    font-size: 1.05rem !important; /* Clean, high-impact scaling */
+}
+
+    /* 2. Hover State: Make links transition beautifully to brand green when you hover over them */
+    #sidebar .nav .nav-item .nav-link:hover,
+    #sidebar .nav .nav-item .nav-link:hover .menu-title,
+    #sidebar .nav .nav-item .nav-link:hover i.menu-icon {
+        color: #004d20 !important; /* Shifts seamlessly to brand green */
+        transition: color 0.2s ease-in-out;
+    }
+
+/* 3. Active State: Force text to white when clicked/active so it contrasts against the dark green pill */
+#sidebar .nav .nav-item.active .nav-link,
+#sidebar .nav .nav-item.active .nav-link .menu-title,
+#sidebar .nav .nav-item.active .nav-link i.menu-icon {
+    color: #ffffff !important; /* High contrast white against dark green */
+    font-weight: 800 !important;
+}
+
+/* 4. Section Headers: Make category layout dividers (e.g., USER MANAGEMENT) look sharp */
+#sidebar .nav .nav-category {
+    color: #333333 !important; /* Clean dark graphite graphite */
+    font-weight: 700 !important; /* Premium structured weight */
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Pro presentation spacing */
+    padding-top: 15px;
+}

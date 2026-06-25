@@ -1,0 +1,191 @@
+/* ============================================================
+   HEADER & NAVIGATION (Desktop Default View)
+   ============================================================ */
+header {
+    background-color: darkgreen;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+nav.nav-links-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+    gap: 30px;
+}
+
+    nav.nav-links-wrapper a {
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 0;
+        transition: 0.3s;
+    }
+
+        nav.nav-links-wrapper a:hover, nav.nav-links-wrapper a.active {
+            color: lightgreen;
+        }
+
+.header-cart-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* ============================================================
+   MOBILE NAVIGATION RESPONSIVENESS
+   ============================================================ */
+@media screen and (max-width: 768px) {
+    header {
+        background-color: darkgreen !important;
+        height: 80px !important;
+    }
+
+    .header-container {
+        display: grid !important;
+        grid-template-columns: 60px 1fr 60px !important;
+        align-items: center !important;
+        padding: 0 15px !important;
+    }
+
+    .mobile-menu-toggle {
+        display: block !important;
+        grid-column: 1 !important;
+        text-align: left;
+        background: none;
+        border: none;
+        color: white !important;
+        font-size: 28px;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .logo-container {
+        grid-column: 2 !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin: 0 !important;
+    }
+
+    .logo {
+        width: 120px !important;
+    }
+
+    .header-cart-container {
+        grid-column: 3 !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+
+    nav.nav-links-wrapper {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: darkgreen;
+        flex-direction: column !important;
+        padding: 20px 0 !important;
+        gap: 20px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        z-index: 999;
+    }
+
+        nav.nav-links-wrapper a {
+            font-size: 18px !important;
+            width: 100%;
+            text-align: center;
+            padding: 5px 0;
+            color: white !important;
+        }
+
+        nav.nav-links-wrapper.show-mobile-menu {
+            display: flex !important;
+        }
+
+    main {
+        margin-top: 20px !important;
+    }
+}
+
+/* ============================================================
+   CART STYLES
+   ============================================================ */
+.cart-link {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    text-decoration: none;
+}
+
+.cart-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-icon {
+    font-size: 24px;
+    color: white;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px;
+    font-size: 10px;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid darkgreen;
+}

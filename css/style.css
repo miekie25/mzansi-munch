@@ -1,0 +1,105 @@
+/* ============================================================
+   GLOBAL RESET & BASE
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    margin-top: 90px;
+}
+
+/* ============================================================
+   BUTTONS & LINKS (Global)
+   ============================================================ */
+.btn-primary, button {
+    font-family: 'Inter', sans-serif;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+    .btn-primary:hover, button:hover {
+        background-color: lightblue;
+        color: black;
+        transform: scale(1.05);
+        border: 2px solid darkgreen;
+    }
+
+a {
+    color: darkgreen;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+    background-color: darkgreen;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    font-weight: bold;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+.text-center {
+    text-align: center !important;
+}
+
+.error-msg {
+    display: block;
+    min-height: 1.2em;
+    color: #cc0000;
+    font-size: 0.85em;
+    margin-top: 2px;
+}
+
+.password-hint {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    color: gray;
+}
+
+.no-orders-row td {
+    padding-top: 40px !important;
+    color: #888;
+    font-style: italic;
+    text-align: center;
+}
