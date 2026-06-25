@@ -16,4 +16,4 @@ https://mzansimunch.infinityfreeapp.com
 - Session timeout security
 
 ## University Project
-Module: ITECA3-34 — Web Development and e-Commerce
+Module: ITECA3-22 - Web Development and e-Commerce
