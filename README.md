@@ -26,7 +26,7 @@ Mzansi Munch is a food delivery platform built for township-based users. It was 
 5. Start Apache and MySQL in XAMPP, then open the site in your browser (e.g. http://localhost/SummativeAssessment/).
 
 ## Short folder structure
-- dmin/ - Admin dashboard files
+- admin/ - Admin dashboard files
 - css/, js/, images/ - Styles, scripts, and assets
 - includes/ - Shared includes (e.g. db_config.php)
 - uploads/ - Uploaded meal images
